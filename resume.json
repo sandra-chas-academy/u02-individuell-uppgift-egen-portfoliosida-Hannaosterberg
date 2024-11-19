@@ -1,0 +1,42 @@
+{
+    "jobs": [
+    {
+        "company": "Kicks Flagship Store",
+        "role": "Counter Manager for Kiehl´s, Sales - Oriented Skin Therapist",
+        "start": "Sep 2020 - Ongoing",
+        "location": "Stockholm"
+    },
+    {
+        "company": "Åhléns",
+        "role": "Sales Associate",
+        "start": " July 2019 - Mars 2020",
+        "location": "Stockholm"
+    },
+    {
+        "company": "Restaurant Vedugnen",
+        "role": "Waitress",
+        "start": " May 2016- Mars 2019",
+        "location": "Karlstad"
+    }
+    ],
+    "education": [
+    {
+        "school": "Chas Academy",
+        "education": "Fullstack Developer - Javascript",
+        "start": "Sep 2024 - Ongoing",
+        "location": "Stockholm"
+    },
+    {
+        "school": "Gilda Skolan",
+        "education": "Skin and Spa Therapist",
+        "start": "Aug 2019 - Aug 2020",
+        "location": "Stockholm"
+    },
+    {
+        "school": "Sundsta High School (Track and Field High School)",
+        "education": "Social Science Program, focus on Behavioral Science",
+        "start": "Aug 2011 - June 2014",
+        "location": "Karlstad"
+    }
+    ]
+} 
