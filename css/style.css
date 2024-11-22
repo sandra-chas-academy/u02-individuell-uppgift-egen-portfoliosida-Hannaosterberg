@@ -5,6 +5,7 @@
 .header {
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 .nav-bar {
     display: flex;
@@ -38,7 +39,6 @@
 }
 .hamburger-icon {
     cursor: pointer;
-    margin-left: 6rem;
 } 
 .hamburger-icon:hover {
     color: #ee9ca7;
@@ -61,7 +61,6 @@ li:hover {
     width: 95vw;
     max-width: 600px;
     margin-bottom: 1rem;
-    position: fixed;
     padding: 1rem;
 }
 .welcome-heading {
@@ -75,4 +74,75 @@ span {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.hero-section {
+    display: flex;
+    flex-direction: column;
+}
+.about-section {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.hero-section h2, h3 {
+    color: var(--heading-color);
+}
+.hero-section p {
+    color: var(--light-color-text);
+}
+.work-experience {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.jobs-container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 6);
+    row-gap: 1rem;
+}
+.education-container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 3);
+    row-gap: 1rem;
+}
+.jobs {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #75435e84;
+    padding: 0.5rem;
 
+}
+.jobs-start-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-column: 2 / 3;
+    grid-row: 1 / 0;
+    border-bottom: 1px solid #75435e84;
+    padding: 0.5rem;
+
+}
+.periodBtn {
+    width: 5rem;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: var(--button-color);
+    color: var(--button-color-text);
+}
+.period {
+    font-size: 10px;
+    align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+    
+}
