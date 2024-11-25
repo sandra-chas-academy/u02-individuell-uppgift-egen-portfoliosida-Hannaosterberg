@@ -8,11 +8,15 @@ const projectsPage = document.querySelector(".Projects");
 const contactPage = document.querySelector(".Contact");
 
 const workExperience = document.querySelector(".jobs-container");
-const educationExperience = document.querySelector(".education-container")
+const educationExperience = document.querySelector(".education-container");
+
+const projectsCard1 = document.querySelector(".projects-section");
 
 
 
 const resume = "resume.json";
+const gitHubAPI = "https://api.github.com/users/Hannaosterberg/repos";
+
 
 menuBtn.addEventListener("click", () => {
     
@@ -24,7 +28,7 @@ menuBtn.addEventListener("click", () => {
         menuIcons.style.display = "none";
     };
     
-})
+});
 
 async function getCV() {
     try {
@@ -34,22 +38,22 @@ async function getCV() {
             throw new Error("HTTP ERROR status: " + response.status);
         }
         const data = await response.json();
-        console.log(data)
         return data;
 
     }catch(error){
         console.error(error);
     }
 }
-async function getCVDetails(jobs,education) {
+async function getRepos() {
     try {
-    const response = await fetch(`${resume}/${jobs}/${education}`);
+    const response = await fetch(gitHubAPI);
     
     if(!response.ok) {
         throw new Error("HTTP ERROR status: " + response.status)
     }
-    const resumeDetails = await response.json();
-    return resumeDetails;
+    const repos = await response.json();
+    console.log(repos);
+    return repos;
 
     }catch(error){
         console.error(error);
@@ -61,20 +65,26 @@ async function displayCV() {
     const displayResume = await getCV();
     const jobs = displayResume.jobs;
     const education = displayResume.education;
-    console.log(jobs)
 
     jobs.forEach(element => {
         workExperience.innerHTML += `
                                     <div class="jobs">
                                     <p class="work1"><img class="office-icon" src="./img/office_icon.svg" alt="office icon">
                                     ${element.company} </p>
+                                    <p class="work-1"><img class="employee-icon" src="./img/employee.svg" alt="employee icon">
+                                    ${element.role} </p>
                                     <p class="work-1"><img class="location-icon" src="./img/location_icon.svg" alt="location icon">
                                     ${element.location} </p>
+                                    
                                     </div>
                                     <div class="jobs-start-end">
                                     <button class="periodBtn">Full Time</button>
                                     <p class = "period"><img class="calender-icon" src="./img/calender_icon.svg" alt="calender icon">
                                     ${element.start}</p>
+                                    </div>
+                                    <div class = "job-description">
+                                    <p class "description">${element.description}</p>
+                                    <img class = "arrow-down" src="./img/nav_arrow_down_icon.svg" alt="arrow-down">
                                     </div>
                                     `;
     });
@@ -98,3 +108,39 @@ async function displayCV() {
 
 }
 displayCV();
+
+async function displayProjects() {
+    
+    const displayRepos = await getRepos();
+    const displayImage = await getCV();
+    const images = displayImage.images;
+
+    displayRepos.forEach(repo => {
+        
+        const projectImage = images.find(image => image.project === repo.name);
+
+        if(projectImage) {
+            projectsCard1.innerHTML += `
+                                    <article class="card-container">
+                                    <figure class = "card-image">
+                                    <img src="${projectImage.imageURL}" alt="${repo.name}">
+                                    </figure>
+                                    <h3 class = "projects"> ${repo.name}</h3>
+                                    <p class = "card-text"> ${repo.description}</p> 
+                                    <div class="card-links">
+                                    <div class="live-link">
+                                    <img src="./img/link_icon.svg" alt="Link-icon">
+                                    <a href="#">Live Preview</a>
+                                    </div>
+                                    <div class="code-link">
+                                    <img src="./img/GH-icon.svg" alt="Github-icon"><a href="${repo.html_url}">View Code</a>
+                                    </div>
+                                    </div>
+                                    </article
+                                    `;
+
+        };
+    });
+}
+getRepos();
+displayProjects();
