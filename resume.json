@@ -47,6 +47,7 @@
     { "project": "Intro-css", "imageURL": "./img/projects/introCSS.jpg"},
     { "project": "rockPaperScissor", "imageURL": "./img/projects/rockPaperScissors.jpg"},
     { "project": "ToDo-list", "imageURL": "./img/projects/toDoList.jpg"},
-    { "project": "trafikljuset", "imageURL": "./img/projects/traficlight.jpg"}
+    { "project": "trafikljuset", "imageURL": "./img/projects/traficlight.jpg"},
+    { "project": "u03-team-AW", "imageURL": "./img/projects/Quizzy.png"}
         ]
 } 

@@ -10,13 +10,13 @@ const contactPage = document.querySelector(".Contact");
 const workExperience = document.querySelector(".jobs-container");
 const educationExperience = document.querySelector(".education-container");
 
-const projectsCard1 = document.querySelector(".projects-section");
+const projectsCard1 = document.querySelector(".project-container");
 
 
 
 const resume = "resume.json";
 const gitHubAPI = "https://api.github.com/users/Hannaosterberg/repos";
-
+let jobDescription;
 
 menuBtn.addEventListener("click", () => {
     
@@ -83,10 +83,22 @@ async function displayCV() {
                                     ${element.start}</p>
                                     </div>
                                     <div class = "job-description">
-                                    <p class "description">${element.description}</p>
-                                    <img class = "arrow-down" src="./img/nav_arrow_down_icon.svg" alt="arrow-down">
+                                    <p class = "description">${element.description}</p>
+                                    <button class = "descriptionBtn"><img class = "arrow-down" src="./img/nav_arrow_down_icon.svg" alt="arrow-down"></button>
                                     </div>
                                     `;
+    });
+    const descriptionBtn = document.querySelectorAll(".descriptionBtn");
+    const description = document.querySelectorAll(".description");
+    const arrowDown = document.querySelectorAll(".arrow-down")
+
+    descriptionBtn.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+            const displayDescription = description[index];
+            displayDescription.classList.toggle("description-display");
+            // arrowDown.style.transform = "180deg";
+        
+        });
     });
     education.forEach(element => {
         educationExperience.innerHTML += `
@@ -103,6 +115,7 @@ async function displayCV() {
                                     <p class = "period"><img class="calender-icon" src="./img/calender_icon.svg" alt="calender icon">
                                     ${element.start}</p>
                                     </div>
+                                    <div class = "line"></div>
                                     `;
     });
 
@@ -125,8 +138,10 @@ async function displayProjects() {
                                     <figure class = "card-image">
                                     <img src="${projectImage.imageURL}" alt="${repo.name}">
                                     </figure>
+                                    <div class="card-content">
                                     <h3 class = "projects"> ${repo.name}</h3>
                                     <p class = "card-text"> ${repo.description}</p> 
+                                    </div>
                                     <div class="card-links">
                                     <div class="live-link">
                                     <img src="./img/link_icon.svg" alt="Link-icon">
