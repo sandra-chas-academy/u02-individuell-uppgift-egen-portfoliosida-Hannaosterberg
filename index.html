@@ -11,24 +11,30 @@
     <script src="./js/main.js" defer></script>
     <title>Egen Portfolio Sida</title>
 </head>
-<body>
+<body >
     <main class="site-container">
         <header class="header">
             <div class="picture-container">
                 <img class="profile-picture" src="./img/hanna.jpg" alt="Picture of Me">
             </div>
             <nav class="nav-bar">
-                <a href="#"><img class="hamburger-icon" src="./img/hamburger_icon.svg" alt="Hamburger icon"></a>
+                <div class="button-menu">
+                <img class="hamburger-icon svg-icons" src="./img/hamburger_icon.svg" alt="Hamburger icon">
+                <button class = "theme-switch">
+                    <svg class = "moon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                </button>
+                </div>
                 <ul class="nav-items">
-                    <li class="Home"><a href="">Home</a></li>
-                    <li class="About"><a href="">About</a></li>
-                    <li class="Projects"><a href="">Projects</a></li>
-                    <li class="Contact"><a href="">Contact</a></li>
+                    <li class="Home"><a href="#">Home</a></li>
+                    <li class="About"><a href="#">About</a></li>
+                    <li class="Projects"><a href="#">Projects</a></li>
+                    <li class="Contact"><a href="#">Contact</a></li>
                 </ul>    
                 <ul class="nav-icons">
-                    <li><a href=""><img src="./img/twitter_icon.svg" alt="twitter icon"></a></li>
-                    <li><a href=""><img src="./img/linkedin_icon.svg" alt="linkedin icon"></a></li>
-                    <li><a href=""><img src="./img/github_icon.svg" alt="github icon"></a></li>
+                    <li><a href=""><img class = "svg-icons" src="./img/twitter_icon.svg" alt="twitter icon"></a></li>
+                    <li><a href="https://www.linkedin.com/in/hanna-%C3%B6sterberg-4b963b203/"><img class = "svg-icons" src="./img/linkedin_icon.svg" alt="linkedin icon"></a></li>
+                    <li><a href="https://github.com/Hannaosterberg"><img class = "svg-icons" src="./img/github_icon.svg" alt="github icon"></a></li>
                 </ul>
             </nav>
         </header>
@@ -64,8 +70,8 @@
         <footer class = "footer">
             <div class="contact-section">
                 <p>Contact-info:</p>
-                <p><img src="./img/phone-icon.svg" alt="phone-icon">+46 70 - 123 45 67</p>
-                <p><img src="./img/mail-icon.svg" alt="mail-icon">Hannaaosterberg@chasacademy.se</p>
+                <p><img class = "svg-icons"src="./img/phone-icon.svg" alt="phone-icon">+46 70 - 123 45 67</p>
+                <p><img class = "svg-icons"src="./img/mail-icon.svg" alt="mail-icon">Hannaaosterberg@chasacademy.se</p>
             </div>
         </footer>
 </body>

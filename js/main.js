@@ -12,11 +12,12 @@ const educationExperience = document.querySelector(".education-container");
 
 const projectsCard1 = document.querySelector(".project-container");
 
-
+const themeSwitch = document.querySelector(".theme-switch")
 
 const resume = "resume.json";
 const gitHubAPI = "https://api.github.com/users/Hannaosterberg/repos";
 let jobDescription;
+let darkModeEnabled = false;
 
 menuBtn.addEventListener("click", () => {
     
@@ -29,6 +30,20 @@ menuBtn.addEventListener("click", () => {
     };
     
 });
+themeSwitch.addEventListener("click", () => {
+    darkModeEnabled = !darkModeEnabled;
+    if(darkModeEnabled) {
+        enableDarkMode();
+    }else {
+        disableDarkMode();
+    }
+})
+const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+}
+const disableDarkMode = () => {
+    document.body.classList.remove("darkmode");
+}
 
 async function getCV() {
     try {
@@ -69,17 +84,17 @@ async function displayCV() {
     jobs.forEach(element => {
         workExperience.innerHTML += `
                                     <div class="jobs">
-                                    <p class="work1"><img class="office-icon" src="./img/office_icon.svg" alt="office icon">
+                                    <p class="work1"><img class = "svg-icons" src="./img/office_icon.svg" alt="office icon">
                                     ${element.company} </p>
-                                    <p class="work-1"><img class="employee-icon" src="./img/employee.svg" alt="employee icon">
+                                    <p class="work-1"><img class="svg-icons employee-icon" src="./img/employee.svg" alt="employee icon">
                                     ${element.role} </p>
-                                    <p class="work-1"><img class="location-icon" src="./img/location_icon.svg" alt="location icon">
+                                    <p class="work-1"><img class = "svg-icons" src="./img/location_icon.svg" alt="location icon">
                                     ${element.location} </p>
                                     
                                     </div>
                                     <div class="jobs-start-end">
                                     <button class="periodBtn">Full Time</button>
-                                    <p class = "period"><img class="calender-icon" src="./img/calender_icon.svg" alt="calender icon">
+                                    <p class = "period"><img class = "svg-icons" src="./img/calender_icon.svg" alt="calender icon">
                                     ${element.start}</p>
                                     </div>
                                     <div class = "job-description">
@@ -103,16 +118,16 @@ async function displayCV() {
     education.forEach(element => {
         educationExperience.innerHTML += `
                                     <div class="jobs">
-                                    <p class="work1"><img class="office-icon" src="./img/office_icon.svg" alt="office icon">
+                                    <p class="work1"><img class = "svg-icons" src="./img/office_icon.svg" alt="office icon">
                                     ${element.school} </p>
-                                    <p class="work1"><img src="./img/student_icon.svg" width = "25"alt="Student icon">
+                                    <p class="work1"><img class = "svg-icons" src="./img/student_icon.svg" width = "25"alt="Student icon">
                                     ${element.education} </p>
-                                    <p class="work-1"><img class="location-icon" src="./img/location_icon.svg" alt="location icon">
+                                    <p class="work-1"><img class = "svg-icons" src="./img/location_icon.svg" alt="location icon">
                                     ${element.location} </p>
                                     </div>
                                     <div class="jobs-start-end">
                                     <button class="periodBtn">Full Time</button>
-                                    <p class = "period"><img class="calender-icon" src="./img/calender_icon.svg" alt="calender icon">
+                                    <p class = "svg-icons"><img class="calender-icon" src="./img/calender_icon.svg" alt="calender icon">
                                     ${element.start}</p>
                                     </div>
                                     <div class = "line"></div>
@@ -144,11 +159,11 @@ async function displayProjects() {
                                     </div>
                                     <div class="card-links">
                                     <div class="live-link">
-                                    <img src="./img/link_icon.svg" alt="Link-icon">
+                                    <img class = "svg-icons" src="./img/link_icon.svg" alt="Link-icon">
                                     <a href="#">Live Preview</a>
                                     </div>
                                     <div class="code-link">
-                                    <img src="./img/GH-icon.svg" alt="Github-icon"><a href="${repo.html_url}">View Code</a>
+                                    <img class = "svg-icons" src="./img/GH-icon.svg" alt="Github-icon"><a href="${repo.html_url}">View Code</a>
                                     </div>
                                     </div>
                                     </article

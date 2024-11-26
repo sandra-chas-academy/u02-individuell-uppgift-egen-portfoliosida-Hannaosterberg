@@ -9,13 +9,27 @@
 
 :root {
     --heading-color: rgb(58, 58, 58);
-    --heading-color-dark: ;
     --light-color-text: #75435e;
-    --dark-color-text: ;
     --button-color: #75435e84;
     --button-color-text: #fee0f1;
-    --hover-color: #ee9ca7;
+    --hover-color: #ee9cbe;
     --background-color: #75435e84;
+    --border-bottom-color: #75435e84;
+    --box-shadow: #996380;
+}
+.darkmode {
+    --heading-color: #ca94b2;
+    --light-color-text: #f988c4c7;
+    --button-color: #f988c4c7;
+    --button-color-text: #fee0f1;
+    --hover-color: #ee9cc4;
+    --background-color: #f787c33d;
+    --border-bottom-color: #75435e84;
+    --box-shadow: #fdddee;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 body {

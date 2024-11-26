@@ -11,11 +11,16 @@
     flex-direction: column;
     align-items: flex-end;
 }
+.button-menu {
+    display: flex;
+    
+    gap: 0.5rem;
+}
 .nav-items {
     display: none;
     flex-direction: column;
-    align-items: flex-end;
-    margin-top: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
     margin-right: 1rem;
     gap: 0.5rem;
     color: var(--light-color-text);
@@ -25,12 +30,16 @@
     justify-content: flex-end;
     gap: 0.5rem;
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
-.nav-bar img{
+.nav-icons img {
     height: 3.5vh;
-    filter: brightness(0) saturate(100%) invert(29%) sepia(8%) saturate(2997%) hue-rotate(275deg) brightness(91%) contrast(83%);
-
+}
+.svg-icons{
+    filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(2109%) hue-rotate(275deg) brightness(92%) contrast(89%);
+}
+.darkmode .svg-icons {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(29%) saturate(538%) hue-rotate(288deg) brightness(104%) contrast(103%);
 }
 .nav-items a {
     color: var(--light-color-text);
@@ -39,11 +48,54 @@ a:hover {
     color: var(--hover-color);
     border-bottom: 2px solid var(--hover-color);
     cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(24%) saturate(861%) hue-rotate(295deg) brightness(94%) contrast(99%);
+}
+.hamburger-icon {
+    height: 35px;
+    width: 35px;
+    margin-bottom: 0.5rem;
+    
+    /* position: absolute;
+    right: 3%; */
+}
+.hamburger-icon:hover {
+    border-bottom: 2px solid var(--hover-color);
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(24%) saturate(861%) hue-rotate(295deg) brightness(94%) contrast(99%);
+}
+.theme-switch {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 0;
+    background-color: var(--light-color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed;
+    margin-top: 12%;
+    right: 3%; */
+}
+.theme-switch:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.sun .moon {
+    fill: var(--button-color-text);
+}
+.sun {
+    display: none;
+}
+.darkmode .moon {
+    display: none;
+}
+.darkmode .sun {
+    display: block;
 }
 
 .picture-container {
     width: 60vw;
-    box-shadow: 2px 2px 2px 2px #75435e;
+    box-shadow: 2px 2px 2px 4px var(--box-shadow);
 }
 .picture-container img {
     width: 100%;
@@ -81,7 +133,7 @@ span {
 }
 .hero-section h2, h3 {
     color: var(--heading-color);
-    text-decoration: underline var(--button-color);
+    text-decoration: underline var(--border-bottom-color);
 }
 .hero-section p {
     color: var(--light-color-text);
@@ -155,10 +207,10 @@ span {
     transform: rotate(180deg);
 } */
 .descriptionBtn:hover {
-    background-color: #ee9ca7;
+    background-color: var(--hover-color);
 }
 .line {
-    background-color: #75435e84;
+    background-color: var(--border-bottom-color);
     height: 1px;
     width: 100%;
     grid-column: 1 / 3;
@@ -204,9 +256,9 @@ span {
     height: auto;
     display: flex;
     flex-direction: column;
-    border: 1px solid #75435e84;
+    border: 1px solid var(--border-bottom-color);
     border-radius: 20px;
-    box-shadow: 2px 2px 2px 2px var(--button-color);
+    box-shadow: 2px 2px 2px 2px var(--box-shadow);
 }
 .card-image img {
     width: 100%;
@@ -228,12 +280,12 @@ span {
 }
 .card-links a {
     color: var(--light-color-text);
-    border-bottom: 2px solid #75435e84;
+    border-bottom: 2px solid var(--border-bottom-color);
     font-weight: 550;
 }
 .card-links a:hover {
-    color: #ee9ca7;
-    border-bottom: 2px solid #ee9ca7;
+    color: var(--hover-color);
+    border-bottom: 2px solid var(--hover-color);
 }
 .code-link a {
     padding-left: 4px;
@@ -265,14 +317,21 @@ span {
     .nav-items {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1.5rem;
     }
     .nav-icons {
         display: flex;
+        margin-top: 5px;
         gap: 1rem;
+        margin-right: 1.5rem;
+        margin-left: 0;
     }
     .nav-bar {
         flex-direction: row;
         align-items: flex-start;
+        
     }
     .picture-container {
         width: 40vw;
@@ -301,6 +360,11 @@ span {
     .card-container {
         width: 40vw;
         
+    }
+    .theme-switch {
+        position: absolute;
+        margin-top: 2px;
+        right: 2%;
     }
 }
 @media (min-width: 1024px) {
