@@ -39,7 +39,7 @@ DELETE-metoden används för att begära borttagning av en resurs.
 Som frontend-utvecklare skapar vi användargränssnitt som hämtar data från servern och skickar data tillbaka. Det är grundläggande för oss att förstå hur HTTP och dess protokoll fungerar för att effektivt kunna utveckla applikationer-och webbsidor. Och även för att kunna felsöka problem som kan uppstå under utvecklingsprocessen.
 
 
-#### Länk till netlify: 
+#### Länk till netlify: <https://portofoliosite-hannaaosterberg.netlify.app/>
 
 
 
