@@ -1,0 +1,53 @@
+{
+    "jobs": [
+    {
+        "company": "Kicks Flagship Store",
+        "role": "Counter Manager for Kiehl´s",
+        "start": "Sep 2020 - Present",
+        "location": "Stockholm",
+        "description": "At Kicks Flagship Store, I am responsible for the Kiehl's counter, a brand I am passionate about and proudly stand behind. My work mainly consists of assisting customers with expert knowledge in skincare, as well as taking care of the counter by cleaning, meeting budget goals, and driving sales forward." 
+    },
+    {
+        "company": "Åhléns",
+        "role": "Sales Associate",
+        "start": " July 2019 - Mars 2020",
+        "location": "Stockholm",
+        "description": "I started with a summer temporary position in the beauty department, which transitioned into a part-time role. My work primarily involved assisting customers and providing suitable advice based on their needs. During my time at Åhléns, I was also given the opportunity to work for the brand Dior, and I became manager for the Dior counter in the department store." 
+    },
+    {
+        "company": "Restaurant Vedugnen",
+        "role": "Waitress",
+        "start": " May 2016- Mars 2019",
+        "location": "Karlstad",
+        "description": "During my time as a waitress, high demands were placed on being service-oriented, stress-resistant, and able to deliver a great experience for the guests. I was also in charge of the time schedule and responsible for training new employees." 
+    }
+    ],
+    "education": [
+    {
+        "school": "Chas Academy",
+        "education": "Fullstack Developer - Javascript",
+        "start": "Sep 2024 - Present",
+        "location": "Stockholm"
+    },
+    {
+        "school": "Gilda Skolan",
+        "education": "Skin and Spa Therapist",
+        "start": "Aug 2019 - Aug 2020",
+        "location": "Stockholm"
+    },
+    {
+        "school": "Sundsta High School",
+        "education": "Social Science Program",
+        "start": "Aug 2011 - June 2014",
+        "location": "Karlstad"
+    }
+    ],
+    "images": [
+    { "project": "FetchPokemon", "imageURL": "./img/projects/fetchPokemon.jpg"},
+    { "project": "Intro-css", "imageURL": "./img/projects/introCSS.jpg"},
+    { "project": "rockPaperScissor", "imageURL": "./img/projects/rockPaperScissors.jpg"},
+    { "project": "ToDo-list", "imageURL": "./img/projects/toDoList.jpg"},
+    { "project": "trafikljuset", "imageURL": "./img/projects/traficlight.jpg"},
+    { "project": "u03-team-AW", "imageURL": "./img/projects/Quizzy.png"}
+        ]
+} 
