@@ -1,77 +1,45 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Y0f03qEq)
-# Instruktioner
+# u02 - Egen portfoliosida, Hannaosterberg
 
-Denna uppgift går ut på att du bygga vidare uppgift u01 - Portfoliosida utifrån designskiss med Javascript. Du är nu fri att ändra till egen design / layout, samt eget innehåll. Det är dock viktigt att du behåller en sektion för CV ("About me") och en sektion med projekt ("Projects") eftersom du ska vidareutveckla sidan med Javascript på dessa sektioner. 
+### Sammanfattning av arbete: 
 
-## Vad du ska göra
+Jag tyckte detta projektet var svårstartat, vi skulle bygga vidare på u01 projektet fast göra det till eget med en fetch av json fil där mitt cv skulle ligga och lägga till funktionalitet med Javascript. Det som var svårt att komma igång med var vad för funktionalitet man skulle addera till sidan då jag inte vet vad man kan lägga till med Javascript. Jag började med att designa sidan och strukturera upp den då jag gjorde en helt ny sida istället för att använda det tidigare u01 projektets mall men utgick ändå från samma struktur. Jag arbetade med att göra klart första sektionen för att sedan göra “about”, “projects” och slutligen “contact”-sektionen.  HTML-strukturen blev kortare då jag istället valde att addera många taggar med innerHTML i Javascript och de taggar jag hade i dokumentet hämtade jag med queryselctor i min Javascript-fil. Jag utgick från mobilefirst på 375px och mina andra brytpunkter är 768px, 1024px och 1200px. 
 
-Du ska bygga vidare på  u01 - Portfoliosida utifrån designskiss med Javascript. och se till att du följer följande kravställningar: 
+Det första jag skrev i min Javascript-kod var en async await-funktion och använde fetch för att hämta datan från json-filen. Sedan skrev jag en funktion där jag läste ut datan till hemsidan med innerHTML. Detta hade vi arbetat med tidigare så jag visste hur jag skulle skriva koden men problemet jag stötte på här var att jag bara fick ut information om ett av jobben från datan. Det enda jag behövde göra för att lösa problemet var att lägga till “+=” i min innerHTML. När detta var klart gick jag vidare till att hämta mina repon och gjorde en till async await funktion med fetch från github API och även en funktion där jag läste ut data från det. Detta var svårt till en början då jag först inte förstod hur jag skulle hämta API:et men efter lite google sökningar fick jag till det. För att lägga till bilderna till de olika projekten gjorde jag ytterligare en lista i min json-fil för dessa och hämtade dem från en tidigare async-funktion för att sedan använda array metoden find. Detta var lite klurigt till en början men det fungerade tillslut. Jag adderade även en loader som visas när min repon hämtas från API:et. Jag adderade även event lyssnare med “click” funktion på lite olika ställen där det passade såsom nav-baren, för att få ut info om de olika jobben, för darkmode och för att scrollas upp till toppen av sidan. 
 
-### CV i en fil:
-Dina egna utbildningar och tidigare arbetsplatser ska nu ersätta "About me"-sidan. Ta med så mycket som möjligt att ditt "riktiga CV", men iallafall minst tre poster av varje.
-Vilka utbildningar du läst och vilka tidigare arbeten du haft ska ligga i en separat fil i JSON-format. Denna JSON-fil ska läsas och och generera ditt CV på den tidigare motsvarigheten av "About me" sidan.
+För att summera så är jag nöjd över mitt projekt, det finns utrymme för förbättringar och jag hade även velat ha lite mer funktionalitet så som scroll funktioner och dylikt men tiden räckte inte till. Jag har fått med alla krav utifrån kravspecifikationen och även VG-kraven och det är jag nöjd över. När det kommer till SEO har jag inte lagt till några metataggar och min prestanda kan bli bättre, jag har komprimerat bilderna men kunde även gjort dessa ännu mindre då det kan förbättra min prestanda på sidan. 
 
 
-### Interaktiva scripts:
-Din CV-sida ska innehålla minst två interaktiva JavaScript. Exempel kan vara en modal, slideshow, scroll-effekt, dölja/visa element, o.s.v
+### Instuderingsfrågor:
 
-### Portfolio:
- Du publicerar minst två uppgifter / projekt från tidigare eller nuvarande studier / arbete inom HTML /CSS
-
-### 👉  VG-krav
-
-Din portfolio ska utökas så att den hämtar in publika projekt som finns i din egen Github via API. Den ska visa dessa projekt i din portfolio med namn och beskrivning.
-
-Du får gärna ha både dessa projekt och andra som genereras utifrån JSON-data om du känner för det, eller så ersätter du projekten så det bara är dina Github-projekt. Eventuellt kan du behöva komplettera datan från Github API med t.ex bilder ifrån JSON-datan.
-
-När hämtningen av projekten sker ska det finnas information om att projekten håller på att ladda in så att besökaren inte undrar varför sidan först är tom.
+1. __Vad kan man utveckla m.h.a av Javascript inom frontend?__
+   
+Inom frontend finns det mycket man kan göra med hjälp av Javascript, du kan skapa webbapplikationer, webbsidor, mobilappar, interaktiva kartor, animationer och spel mm. Javascript används för att göra webbsidor och applikationer interaktiva och dynamiska. Nästan alla webbsidor och applikationer du stöter på idag använder Javascript och tillsammans med HTML och CSS utgör de grunden för alla dessa. 
+T ex inom AI har många utvecklare använt JS för att bygga webbsidor och system som utnyttjar AI. JS används också för att göra de flesta spel och applikationer på internet. Detta eftersom det körs direkt i webbläsaren och JS tillåter användare att spela spel och köra applikationer utan att ladda ner programvara. Utvecklare kan med hjälp av Javascript skapa enkla arkadspel till större solida flerspelarspel. 
+Bara för att nämna några exempel, Javascript är ett av de mest kraftfulla och mångsidiga språken för frontendutvecklare som tillåter dig att skapa nästan vad som helst. Det ger en utvecklare stor flexibilitet och kontroll över användarupplevelsen på webben, vilket gör det till ett nödvändigt verktyg i moderna webbapplikationer. 
 
 
-
-### Tekniska krav:
-* Validerad med 0 fel på https://validator.w3.org
-* Inga errors i Console
-
-### Sammantfattning av projekt + teoretiska frågor
-
-1. Du sammanfattar ditt projekt i README.md och reflekterar kring styrkor och ev brister. Max 500 ord.
-2. Du svarar på dessa frågor (max 800 ord):
-
-Vad kan man utveckla m.h.a av Javascript inom frontend?
-Vad är JSON och hur används det inom frontend?
-Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
+3. __Vad är JSON och hur används det inom frontend?__
+   
+JSON eller Javascript Object Notation är ett lättviktigt datautbytesformat. Det används för att skicka data från backend till frontend. Oftast kommer datan från en server och backend omvandlar detta till JSON. 
+JSON har två huvudsakliga datastrukturer:
+Arrayer, en ordnad lista av värden.
+Objekt, en samling av nyckel/värdepar. 
+Eftersom formatet endast är text kan JSON-data skickas mellan datorer och användas av vilket programmeringspråk som helst. Javascript-objekt och JSON har liknande syntax och i ett javascript-program kan man då enkelt konvertera JSON-datan till Javascript-objekt. För att konvertera en JSON-sträng till JS-objekt: JSON.parse() och för att konvertera objekt till JSON-sträng: JSON.stringify(). 
+Sammafattningsvis används JSON inom frontend-utveckling för att hantera och utbyta data mellan klienten och servern. 	
 
 
-## Kriterier för bedömning
+4. __Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?__
+
+HTTP eller hypertext Transfer Protocol är grunden för all datakommunikation på internet. Detta protokoll gör det möjligt för din webbläsare att hämta och visa webbsidor och i detta finns HTTP-metoder som definierar de åtgärder en klient kan utföra. 
+Dessa HTTP-metoder har var och en ett specifikt syfte och ger ett standardiserat sätt för klienter såsom webbläsare eller applikationer att interagera med webbservrar. 
+GET-metoden används för att begära data från en specifik resurs.
+POST-metoden används för att skicka in data som ska bearbetas av en resurs. 
+PUT-metoden används för att uppdatera en resurs eller skapa den om den inte finns.
+DELETE-metoden används för att begära borttagning av en resurs. 
+Som frontend-utvecklare skapar vi användargränssnitt som hämtar data från servern och skickar data tillbaka. Det är grundläggande för oss att förstå hur HTTP och dess protokoll fungerar för att effektivt kunna utveckla applikationer-och webbsidor. Och även för att kunna felsöka problem som kan uppstå under utvecklingsprocessen.
 
 
-Icke Godkänd (IG), Godkänd (G) eller Väl Godkänd (VG)
-
-### Godkänd (G)
-Din portfolio-sida uppfyller alla krav enligt kravspecifikationen.
-Du visar att du kan utan allvarliga brister eller missar utveckla denna portfoliosida enligt kraven
-Du sammanfattar ditt projekt samt ger ett översiktligt och korrekt svar på frågorna
-
-
-### Väl Godkänd (VG)
-
-Din portfolio-sida uppfyller alla krav enligt kravspecifikationen samt VG-kraven
-Du uppvisar en mer avancerad förståelse för Git genom att jobba med en developer-branch som du sedan mergar i main
-Du visar att du kan utan brister, eller bara i sådan omfattning att de knappt märks eller påverkar slutresultatet
-
-
-### Börja uppgift / Din inlämning
-* Du börjar och lämnar in din uppgift genom Github Classroom på denna länk.
-* Återkoppling ges i Canvas
+#### Länk till netlify: 
 
 
 
-
-
-
-
-
-
-
-
-# 
