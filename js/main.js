@@ -45,6 +45,8 @@ const enableDarkMode = () => {
 const disableDarkMode = () => {
     document.body.classList.remove("darkmode");
 }
+displayCV();
+displayProjects();
 
 async function getCV() {
     try {
@@ -133,9 +135,7 @@ async function displayCV() {
                                     `;
     });
 
-}
-displayCV();
-
+};
 async function displayProjects() {
     
     const displayRepos = await getRepos();
@@ -185,6 +185,4 @@ async function displayProjects() {
         }, 4000);
         };
     });
-}
-getRepos();
-displayProjects();
+};
