@@ -13,7 +13,7 @@
 </head>
 <body >
     <main class="site-container">
-        <header class="header">
+        <header class="header" id="home-section">
             <div class="picture-container">
                 <img class="profile-picture" src="./img/hanna.jpg" alt="Picture of Me">
             </div>
@@ -26,10 +26,10 @@
                 </button>
                 </div>
                 <ul class="nav-items">
-                    <li class="Home"><a href="#">Home</a></li>
-                    <li class="About"><a href="#">About</a></li>
-                    <li class="Projects"><a href="#">Projects</a></li>
-                    <li class="Contact"><a href="#">Contact</a></li>
+                    <li class="Home"><a href="#home-section">Home</a></li>
+                    <li class="About"><a href="#aboutSection">About</a></li>
+                    <li class="Projects"><a href="#projectSection">Projects</a></li>
+                    <li class="Contact"><a href="#contactSection">Contact</a></li>
                 </ul>    
                 <ul class="nav-icons">
                     <li><a href=""><img class = "svg-icons" src="./img/twitter_icon.svg" alt="twitter icon"></a></li>
@@ -46,7 +46,7 @@
                 <br>Fullstack Developer - Javascript
                 </h1>
             </div>
-            <article class="about-section">
+            <article class="about-section" id="aboutSection">
                 <h2 class="about-heading">About me</h2>
                 <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae, quam itaque porro unde fugiat excepturi dolore! Est, odio tempora reiciendis sapiente, eveniet consequuntur aperiam ex tenetur atque quos totam.</p>
                 <div class="work-experience">
@@ -58,16 +58,19 @@
                     <div class="education-container"></div>
                 </div>
                 </article>
-            <section class="projects-section">
+            <section class="projects-section" id="projectSection">
                 <div class="projects-welcome-text">
                 <h2 class="projects-heading">Projects</h2>
                 <p class="projects-text">Here is some of my projects I´ve been working on, If you want to see more please visit my <a href="https://github.com/Hannaosterberg">GitHub page!</a></p>
                 </div>
                 <div class="project-container"></div>
+                <!-- <div class="loader"></div> -->
             </section>
         </section>
     </main>
-        <footer class = "footer">
+        <a class ="arrow-up" href="#home-section"><img src="./img/nav_arrow_down_icon.svg" alt="arrow-up"></a>
+        <footer class = "footer" id="contactSection">
+        <!-- <a class ="arrow-up" href="#home-section"><img src="./img/nav_arrow_down_icon.svg" alt="arrow-up"></a> -->
             <div class="contact-section">
                 <p>Contact-info:</p>
                 <p><img class = "svg-icons"src="./img/phone-icon.svg" alt="phone-icon">+46 70 - 123 45 67</p>

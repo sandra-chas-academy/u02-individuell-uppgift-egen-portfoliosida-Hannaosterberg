@@ -10,7 +10,7 @@ const contactPage = document.querySelector(".Contact");
 const workExperience = document.querySelector(".jobs-container");
 const educationExperience = document.querySelector(".education-container");
 
-const projectsCard1 = document.querySelector(".project-container");
+const projectsContainer = document.querySelector(".project-container");
 
 const themeSwitch = document.querySelector(".theme-switch")
 
@@ -30,6 +30,7 @@ menuBtn.addEventListener("click", () => {
     };
     
 });
+
 themeSwitch.addEventListener("click", () => {
     darkModeEnabled = !darkModeEnabled;
     if(darkModeEnabled) {
@@ -61,13 +62,13 @@ async function getCV() {
 }
 async function getRepos() {
     try {
+
     const response = await fetch(gitHubAPI);
     
     if(!response.ok) {
         throw new Error("HTTP ERROR status: " + response.status)
     }
     const repos = await response.json();
-    console.log(repos);
     return repos;
 
     }catch(error){
@@ -103,16 +104,14 @@ async function displayCV() {
                                     </div>
                                     `;
     });
-    const descriptionBtn = document.querySelectorAll(".descriptionBtn");
-    const description = document.querySelectorAll(".description");
-    const arrowDown = document.querySelectorAll(".arrow-down")
+    const descriptionBtn = workExperience.querySelectorAll(".descriptionBtn");
+    const description = workExperience.querySelectorAll(".description");
+    const arrowDown = workExperience.querySelectorAll(".arrow-down")
 
     descriptionBtn.forEach((btn, index) => {
         btn.addEventListener("click", () => {
             const displayDescription = description[index];
             displayDescription.classList.toggle("description-display");
-            // arrowDown.style.transform = "180deg";
-        
         });
     });
     education.forEach(element => {
@@ -148,11 +147,14 @@ async function displayProjects() {
         const projectImage = images.find(image => image.project === repo.name);
 
         if(projectImage) {
-            projectsCard1.innerHTML += `
-                                    <article class="card-container">
+            const projectCard = document.createElement("article");
+            projectCard.classList.add("card-container");
+
+            projectCard.innerHTML += `
                                     <figure class = "card-image">
                                     <img src="${projectImage.imageURL}" alt="${repo.name}">
                                     </figure>
+                                    <div class="loader">loading content...</div>
                                     <div class="card-content">
                                     <h3 class = "projects"> ${repo.name}</h3>
                                     <p class = "card-text"> ${repo.description}</p> 
@@ -163,12 +165,24 @@ async function displayProjects() {
                                     <a href="#">Live Preview</a>
                                     </div>
                                     <div class="code-link">
-                                    <img class = "svg-icons" src="./img/GH-icon.svg" alt="Github-icon"><a href="${repo.html_url}">View Code</a>
+                                    <img class = "svg-icons" src="./img/GH-icon.svg" alt="Github-icon">
+                                    <a href="${repo.html_url}">View Code</a>
                                     </div>
                                     </div>
-                                    </article
                                     `;
+        projectsContainer.appendChild(projectCard);
 
+        const cardImage = projectCard.querySelector(".card-image");
+        const cardContent = projectCard.querySelector(".card-content");
+        const cardLinks = projectCard.querySelector(".card-links");
+        const loader = projectCard.querySelector(".loader");
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            cardImage.style.display = "block"
+            cardContent.style.display = "flex"
+            cardLinks.style.display = "flex"
+        }, 4000);
         };
     });
 }
