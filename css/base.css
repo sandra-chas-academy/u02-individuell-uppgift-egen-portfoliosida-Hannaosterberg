@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --heading-color: rgb(58, 58, 58);
+    --light-color-text: #75435e;
+    --button-color: #75435e84;
+    --button-color-text: #fee0f1;
+    --hover-color: #ee9cbe;
+    --background-color: #75435e84;
+    --border-bottom-color: #75435e84;
+    --box-shadow: #996380;
+}
+.darkmode {
+    --heading-color: #ca94b2;
+    --light-color-text: #f988c4c7;
+    --button-color: #f988c4c7;
+    --button-color-text: #fee0f1;
+    --hover-color: #ffd4e9;
+    --background-color: #f787c33d;
+    --border-bottom-color: #ca94b2;
+    --box-shadow: #fdddee;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+body {
+background: #fcedef;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #fcedef, #e3b8be);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #fcedef, #f0c3c9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
